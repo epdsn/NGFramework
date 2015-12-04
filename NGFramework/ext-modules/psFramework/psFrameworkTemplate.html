@@ -1,10 +1,10 @@
 ﻿<div class="ps-title-bar">
     <div class="row">
         <div class="ps-logo-area col-sm-6">
-            <img ng-src="" alt="" class="ps-icon" />
+            <img ng-src="{{ iconFile }}" alt="" class="ps-icon" />
             <div class="ps-title-area">
-                <p class="ps-logo-title">White water adventures</p>
-                <p class="ps-logo-subtitle">Administrative App</p>
+                <p class="ps-logo-title">{{ title }}</p>
+                <p class="ps-logo-subtitle">{{ subtitle }}</p>
             </div>
         </div>
         <div class="ps-right-side-controls col-sm-6">
@@ -16,3 +16,4 @@
         </div>
     </div>
 </div>
+<div ng-transclude></div>

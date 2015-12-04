@@ -6,6 +6,11 @@
 
 .ps-title-area {
     display: inline-block;
+    text-align:center;
+}
+
+.ps-logo-area {
+    text-align:center;
 }
 
 .ps-icon {
@@ -33,6 +38,19 @@
 }
 
 .ps-right-side-controls > div {
-    text-align: right;
+    text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+    .ps-right-side-controls > div {
+        text-align: right;
+    }
+    .ps-logo-area {
+        text-align:left;
+    }
+
+    .ps-logo-subtitle {
+        text-align:left;
+    }
+
+}
