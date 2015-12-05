@@ -66,6 +66,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\appConfig.js" />
+    <Content Include="ext-modules\psMenu\psMenu.css" />
+    <Content Include="ext-modules\psMenu\psMenuController.js" />
+    <Content Include="ext-modules\psMenu\psMenuDirective.js" />
+    <Content Include="ext-modules\psMenu\psMenuItemDirective.js" />
+    <Content Include="ext-modules\psMenu\psMenuItemTemplate.html" />
+    <Content Include="ext-modules\psMenu\psMenuTemplate.html" />
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
     <None Include="Web.Debug.config">
