@@ -9,6 +9,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/angular-gridster.min.css" rel="stylesheet" />
     <link href="app/app.css" rel="stylesheet" />
     <link href="ext-modules/psFramework/psFramework.css" rel="stylesheet" />
     <link href="ext-modules/psMenu/psMenu.css" rel="stylesheet" />
@@ -17,6 +18,8 @@
     <script src="Scripts/jquery-2.1.4.min.js"></script>
     <script src="Scripts/angular.min.js"></script>
     <script src="Scripts/angular-animate.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-gridster.js"></script>
 
     <!-- Modules -->
     <script src="ext-modules/psMenu/psMenuModule.js"></script>
@@ -28,11 +31,17 @@
     <script src="ext-modules/psDashboard/psDashboardModule.js"></script>
 
     <script src="ext-modules/psFramework/psFrameworkModule.js"></script>
-    <script src="ext-modules/psFramework/psFrameworkModule.js"></script>
     <script src="ext-modules/psFramework/psFrameworkController.js"></script>
     <script src="ext-modules/psFramework/psFrameworkDirective.js"></script>
+
     <script src="app/appModule.js"></script>
-    <!--<script src="app/appConfig.js"></script>-->
+    <script src="app/appConfig.js"></script>
+    <script src="app/appRouteConfig.js"></script>
+
+    <script src="app/directives/wwaDashboardDirective.js"></script>
+    <script src="app/directives/wwaGuidesDirective.js"></script>
+    <script src="app/directives/wwaLocationsDirective.js"></script>
+
 
 </head>
 <body class="container-fluid">
@@ -51,8 +60,8 @@
                     <ps-menu-item label="Rafts2" icon="fa-unlink" route="rafts"></ps-menu-item>
                     <ps-menu-item label="Paddles2" icon="fa-magic" route="paddles"></ps-menu-item>
                     <ps-menu-item label="Life Vests2" icon="fa-life-ring" route="vests"></ps-menu-item>
-                </ps-menu-group>   
-            </ps-menu-group>   
+                </ps-menu-group>
+            </ps-menu-group>
         </ps-menu>
     </ps-framework>
 </body>

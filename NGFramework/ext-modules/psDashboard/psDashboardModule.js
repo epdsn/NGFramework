@@ -1,4 +1,4 @@
 ﻿"use strict";
 
 angular
-    .module("psDashboard", []);
+    .module("psDashboard", ["gridster"]);

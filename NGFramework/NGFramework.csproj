@@ -64,6 +64,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\appConfig.js" />
+    <Content Include="app\appRouteConfig.js" />
+    <Content Include="app\directives\wwaDashboardDirective.js" />
+    <Content Include="app\directives\wwaGuidesDirective.js" />
+    <Content Include="app\directives\wwaLocationsDirective.js" />
+    <Content Include="Content\angular-gridster.min.css" />
     <Content Include="ext-modules\psMenu\psMenu.css" />
     <Content Include="ext-modules\psMenu\psMenuController.js" />
     <Content Include="ext-modules\psMenu\psMenuDirective.js" />
@@ -75,8 +80,12 @@
     <Content Include="packages.config" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
+    <Content Include="Scripts\angular-gridster.js" />
+    <Content Include="Scripts\angular-route.js" />
+    <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
+    <Content Include="Scripts\angular-route.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
