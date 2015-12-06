@@ -1,17 +1,24 @@
 ﻿"use strict";
 angular
     .module("psFramework").controller("psFrameworkController",
-        ['$scope', '$rootScope', '$window', '$timeout',
-            function ($scope, $rootScope, $window, $timeout) {
+        ['$scope', '$window', '$timeout', '$rootScope',
+            function ($scope, $window, $timeout, $rootScope ) {
 
                 $scope.isMenuVisible = true;
                 $scope.isMenuButtonVisible = true;
+                $scope.isMenuVertical = true;
 
                 $scope.$on('ps-menu-item-selected-event', function (evt, data) {
                     $scope.routeString = data.route;
                     checkWidth();
                     broadcastMenuState();
                 });
+
+                // flag from psMenu controller letting the framework know that the menu has changed.
+                $scope.$on('ps-menu-orientation-changed-event', function (evt, data) {
+                    $scope.isMenuVertical = data.isMenuVertical;
+                });
+
 
                 // attach event to window when it is resized
                 // the event is also given a namespace of .psFramework
@@ -27,7 +34,7 @@ angular
                 });
 
                 var checkWidth = function () {
-                    // gets the full width of the window, even when the scrollbar shows up.
+                    // gets the full width of the window (uses the bigger value), for when the scrollbar shows up.
                     var width = Math.max($($window).width(), $($window).innerWidth());
                     $scope.isMenuVisible = (width > 768);
                     $scope.isMenuButtonVisible = !$scope.isMenuVisible;
@@ -37,13 +44,15 @@ angular
                 $scope.menuButtonClicked = function () {
                     $scope.isMenuVisible = !$scope.isMenuVisible;
                     broadcastMenuState();
-                    //$scope.$apply();
+                    //$scope.$apply(); //not sure why this is not working
                 };
 
                 var broadcastMenuState = function () {
                     $rootScope.$broadcast('ps-menu-show',
                         {
-                            show: $scope.isMenuVisible
+                            show: $scope.isMenuVisible,
+                            isVertical: $scope.isMenuVertical,
+                            allowHorizontalToggle: !$scope.isMenuButtonVisible
                         });
                 };
 
