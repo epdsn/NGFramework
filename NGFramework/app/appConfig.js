@@ -1,5 +1,6 @@
-﻿angular.module('app').config(function ($provider) {
-    $provider.decorator("$exceptionHandler", ["$delegate", function ($delegate) {
+﻿"use strict";
+angular.module('app').config(function ($provide) {
+    $provide.decorator("$exceptionHandler", ["$delegate", function ($delegate) {
         return function (exception, cause) {
             $delegate(exception, cause);
             // alert(exception.message);
